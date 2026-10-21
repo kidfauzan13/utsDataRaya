@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#072B4B" />
+
+    <title>SportSafe.id — Belajar Olahraga</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+      <nav class="navbar-inner container" aria-label="Navigasi utama">
+        <a href="#beranda" class="brand" aria-label="SportSafe.id Beranda">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0B63D6" />
+                <stop offset="1" stop-color="#10B981" />
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="url(#logoGrad)" />
+            <polyline points="12,34 22,34 27,20 34,46 39,34 52,34" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="brand-name">SportSafe<em>.id</em></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#beranda" class="nav-link is-active">Beranda</a></li>
+          <li><a href="#artikel" class="nav-link">Artikel</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#bmi" class="nav-link">BMI</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#tentang-kami" class="nav-link">Tentang</a></li>
+          <li><a href="#referensi" class="nav-link">Referensi</a></li>
+        </ul>
+
+        <a href="#artikel" class="btn btn-primary btn-sm navbar-cta"> Mulai Belajar </a>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ================= PROGRESS BAR ================= -->
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+    <!-- ================= KONTEN UTAMA ================= -->
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="beranda">
+        <div class="glow glow-blue" aria-hidden="true"></div>
+        <div class="glow glow-green" aria-hidden="true"></div>
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="chip hero-chip reveal is-visible">Proyek UTS · Data Raya &amp; Pemrograman · Sport Science</p>
+
+            <h1 class="hero-title">
+              <span class="line-mask">
+                <span class="line-inner">Olahraga Aman</span>
+              </span>
+              <span class="line-mask">
+                <span class="line-inner"> untuk <em class="accent-script">Pemula</em> </span>
+              </span>
+              <span class="line-mask">
+                <span class="line-inner"> yang Sehat.</span>
+              </span>
+            </h1>
+
+            <p class="hero-tagline">
+              Mulai bergerak tanpa takut cedera. Di sini kamu belajar
+              <strong>pemanasan</strong>, <strong>mencegah cedera</strong>, dan <strong>pemulihan</strong> setelah latihan — dijelaskan pakai bahasa sehari-hari, bukan bahasa buku teks.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#artikel" class="btn btn-lime">
+                Mulai Belajar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m13 6 6 6-6 6" />
+                </svg>
+              </a>
+
+              <a href="#quiz" class="btn btn-ghost"> Uji Pemahamanmu </a>
+            </div>
+
+            <dl class="hero-stats">
+              <div class="stat">
+                <dt class="stat-number">150 <small>menit</small></dt>
+                <dd class="stat-label">aktivitas fisik per minggu untuk dewasa, menurut WHO (2020)</dd>
+              </div>
+
+              <div class="stat">
+                <dt class="stat-number">5–10 <small>menit</small></dt>
+                <dd class="stat-label">durasi pemanasan yang disarankan sebelum olahraga (Fradkin dkk., 2010)</dd>
+              </div>
+
+              <div class="stat">
+                <dt class="stat-number">&lt; 1/3</dt>
+                <dd class="stat-label">risiko cedera olahraga bila rutin latihan kekuatan (Lauersen dkk., 2014)</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual" id="heroVisual">
+            <figure class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1790337427406-07a4df94f012?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Dua pemula berlatih pemanasan" loading="eager" />
+            </figure>
+
+            <div class="rotating-badge" aria-hidden="true">
+              <svg viewBox="0 0 120 120" class="badge-svg">
+                <defs>
+                  <path id="circlePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
+                </defs>
+                <text class="badge-text">
+                  <textPath href="#circlePath" textLength="288">OLAHRAGA AMAN ✦ UNTUK PEMULA ✦ SPORTSAFE.ID ✦</textPath>
+                </text>
+              </svg>
+
+              <svg class="badge-center" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </div>
+
+            <div class="float-chip chip-1">
+              <span class="chip-dot"></span>
+              Pemanasan dulu, 5–10 menit
+            </div>
+
+            <div class="float-chip chip-2">
+              <span class="chip-dot"></span>
+              Dengarkan sinyal tubuhmu
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#kunci-aman" aria-label="Scroll ke bagian berikutnya">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- ================= TIGA KUNCI OLAHRAGA AMAN ================= -->
+      <section class="ss-keys" id="kunci-aman">
+        <div class="ss-keys-container">
+          <div class="ss-keys-heading">
+            <span class="ss-keys-eyebrow">KENAPA INI PENTING?</span>
+            <h2>Tiga kunci <em>olahraga aman</em></h2>
+            <p>Semua materi di website ini berdiri di atas tiga kunci sederhana ini. Pahami ketiganya, dan kamu sudah selangkah lebih aman daripada kebanyakan pemula.</p>
+          </div>
+
+          <div class="ss-keys-grid">
+            <article class="ss-key-card">
+              <span class="ss-key-number">01</span>
+
+              <div class="ss-key-icon ss-icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22c4.5 0 7-3 7-7 0-2.5-1.4-4.5-3.5-6.5.1 2-1 3-2 3.5C14 7 12 4 9 2c.5 4-1 6-3 9-2.5 5 .5 11 6 11Z" />
+                  <path d="M12 22c-2 0-3.5-1.5-3.5-3.5 0-1.5 1-3 2.5-4.5.2 1.5 1 2 2 2.5 1 2.5.5 4.5-1 5.5Z" />
+                </svg>
+              </div>
+
+              <h3>Pemanasan</h3>
+              <p>Menyiapkan jantung, otot, dan sendi sebelum bergerak. Pemanasan yang cukup membantu tubuh bersiap menerima beban latihan.</p>
+
+              <div class="ss-key-tags">
+                <span>5–10 menit</span>
+                <span>Gerakan dinamis</span>
+              </div>
+            </article>
+
+            <article class="ss-key-card ss-key-featured">
+              <span class="ss-key-number">02</span>
+
+              <div class="ss-key-icon ss-icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+
+              <h3>Pencegahan Cedera</h3>
+              <p>Kenali cedera yang sering terjadi, pelajari teknik dasar yang benar, dan naikkan intensitas latihan sedikit demi sedikit — bukan sekaligus.</p>
+
+              <div class="ss-key-tags">
+                <span>Teknik benar</span>
+                <span>Progresi bertahap</span>
+              </div>
+            </article>
+
+            <article class="ss-key-card">
+              <span class="ss-key-number">03</span>
+
+              <div class="ss-key-icon ss-icon-lime">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />
+                </svg>
+              </div>
+
+              <h3>Pemulihan</h3>
+              <p>Tubuh membutuhkan waktu untuk pulih setelah latihan. Tidur cukup, makan seimbang, dan hari istirahat merupakan bagian dari program latihan, bukan kemalasan.</p>
+
+              <div class="ss-key-tags">
+                <span>Tidur cukup</span>
+                <span>Hari istirahat</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ARTIKEL POPULER ================= -->
+      <section class="ss-articles" id="artikel">
+        <div class="ss-articles-inner">
+          <div class="ss-articles-heading">
+            <div class="ss-heading-main">
+              <p class="ss-eyebrow">ARTIKEL POPULER</p>
+              <h2>Baca dulu, <em>baru gerak</em></h2>
+            </div>
+
+            <p class="ss-heading-description">Empat artikel paling sering dibaca pemula, ditambah bahasan khusus atlet dan performa. Klik kartu mana pun untuk membaca versi lengkapnya, lengkap dengan tips praktis dan sumber ilmiahnya.</p>
+          </div>
+
+          <div class="ss-article-grid">
+            <article class="ss-article-card">
+              <button class="ss-card-button" data-ss-article="warmup">
+                <div class="ss-card-image">
+                  <img src="https://images.pexels.com/photos/8084821/pexels-photo-8084821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Peregangan sebelum olahraga" loading="lazy" />
+                  <span class="ss-tag ss-tag-blue">PEMANASAN</span>
+                </div>
+                <div class="ss-card-content">
+                  <p class="ss-card-meta">7 MENIT BACA · PEMULA</p>
+                  <h3>Pentingnya Pemanasan Sebelum Olahraga</h3>
+                  <p class="ss-card-description">Pemanasan bukan formalitas: kenali manfaatnya, jenis-jenisnya, kesalahan yang sering terjadi, plus rutinitas 10 menit yang bisa langsung kamu praktikkan.</p>
+                  <span class="ss-read-more">Baca selengkapnya <span>→</span></span>
+                </div>
+              </button>
+            </article>
+
+            <article class="ss-article-card">
+              <button class="ss-card-button" data-ss-article="cedera">
+                <div class="ss-card-image">
+                  <img src="https://images.unsplash.com/photo-1545463913-5083aa7359a6?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Pemeriksaan cedera olahraga" loading="lazy" />
+                  <span class="ss-tag ss-tag-green">PENCEGAHAN</span>
+                </div>
+                <div class="ss-card-content">
+                  <p class="ss-card-meta">8 MENIT BACA · PEMULA</p>
+                  <h3>Cedera Olahraga yang Sering Dialami Pemula</h3>
+                  <p class="ss-card-description">Keseleo, robekan ACL, sampai meniscus — kenali jenis cedera olahraga, penyebabnya, cara mencegahnya, dan penanganan awal yang benar.</p>
+                  <span class="ss-read-more">Baca selengkapnya <span>→</span></span>
+                </div>
+              </button>
+            </article>
+
+            <article class="ss-article-card">
+              <button class="ss-card-button" data-ss-article="recovery">
+                <div class="ss-card-image">
+                  <img src="https://images.unsplash.com/photo-1761839257789-20147513121a?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Atlet beristirahat setelah latihan" loading="lazy" />
+                  <span class="ss-tag ss-tag-lime">PEMULIHAN</span>
+                </div>
+                <div class="ss-card-content">
+                  <p class="ss-card-meta">9 MENIT BACA · PEMULA</p>
+                  <h3>Recovery dan Istirahat Setelah Latihan</h3>
+                  <p class="ss-card-description">Pelajari langkah pendinginan, hidrasi, nutrisi, tidur, dan hari istirahat yang membuat latihanmu tidak sia-sia.</p>
+                  <span class="ss-read-more">Baca selengkapnya <span>→</span></span>
+                </div>
+              </button>
+            </article>
+
+            <article class="ss-article-card ss-card-wide">
+              <button class="ss-card-button" data-ss-article="cooldown">
+                <div class="ss-card-image">
+                  <img src="https://images.unsplash.com/photo-1562771379-eafdca7a02f8?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Atlet melakukan peregangan" loading="lazy" />
+                  <span class="ss-tag ss-tag-blue">PERFORMA</span>
+                </div>
+                <div class="ss-card-content">
+                  <p class="ss-card-meta">6 MENIT BACA · SEMUA LEVEL</p>
+                  <h3>Pemanasan dan Pendinginan: Kunci Performa dan Keselamatan Atlet</h3>
+                  <p class="ss-card-description">Dua elemen yang sering dilewatkan: pahami peran pemanasan dan pendinginan serta landasan fisiologisnya.</p>
+                  <span class="ss-read-more">Baca selengkapnya <span>→</span></span>
+                </div>
+              </button>
+            </article>
+
+            <article class="ss-article-card ss-card-wide ss-card-flip">
+              <button class="ss-card-button" data-ss-article="atlet">
+                <div class="ss-card-image">
+                  <img src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Pemeriksaan cedera atlet" loading="lazy" />
+                  <span class="ss-tag ss-tag-blue">PRESTASI</span>
+                </div>
+                <div class="ss-card-content">
+                  <p class="ss-card-meta">5 MENIT BACA · ATLET</p>
+                  <h3>Cedera Olahraga pada Atlet: Penyebab, Penanganan, dan Pencegahan</h3>
+                  <p class="ss-card-description">Pelajari jenis cedera atlet, penanganan sesuai tingkat keparahan, dan cara mencegah cedera berulang.</p>
+                  <span class="ss-read-more">Baca selengkapnya <span>→</span></span>
+                </div>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MODAL ARTIKEL ================= -->
+      <div class="ss-modal" id="ssArticleModal" hidden>
+        <div class="ss-modal-panel" role="dialog" aria-modal="true" aria-labelledby="ssModalTitle">
+          <button class="ss-modal-close" id="ssModalClose" aria-label="Tutup artikel">×</button>
+          <img class="ss-modal-image" id="ssModalImage" src="" alt="" />
+          <div class="ss-modal-body">
+            <p class="ss-card-meta" id="ssModalMeta"></p>
+            <h2 id="ssModalTitle"></h2>
+            <div class="ss-modal-text" id="ssModalText"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= QUIZ ================= -->
+      <section class="section quiz-section" id="quiz">
+        <div class="glow glow-blue" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-head section-head-light reveal">
+            <p class="eyebrow eyebrow-lime">Fitur interaktif</p>
+            <h2>Uji pemahamanmu, <em class="accent-script">skor seberapa siap kamu</em></h2>
+            <p class="section-sub">Tujuh pertanyaan singkat tentang pemanasan, cedera, pendinginan, dan pemulihan. Jawab santai saja — ini bukan ujian, ini pemanasan otakmu.</p>
+          </div>
+
+          <div class="quiz-card reveal">
+            <div class="quiz-progress" aria-hidden="true">
+              <div class="quiz-progress-fill" id="quizProgressFill"></div>
+            </div>
+            <p class="quiz-count" id="quizCount">Pertanyaan 1 dari 7</p>
+            <div id="quizBox"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KALKULATOR BMI ================= -->
+      <section class="section bmi-section" id="bmi">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow eyebrow-green">Fitur interaktif</p>
+            <h2>Kalkulator <em class="accent-script">BMI</em></h2>
+            <p class="section-sub">Indeks Massa Tubuh (IMT/BMI) membantu memberikan gambaran awal mengenai berat badan berdasarkan tinggi badan. Masukkan datamu untuk mengetahui hasil perhitungan BMI.</p>
+          </div>
+
+          <div class="bmi-card reveal">
+            <form class="bmi-form" id="bmiForm" novalidate>
+              <div class="bmi-form-heading">
+                <span class="bmi-icon" aria-hidden="true">↗</span>
+                <h3>Masukkan datamu</h3>
+                <p>Isi tinggi dan berat badan sesuai kondisimu saat ini.</p>
+              </div>
+
+              <label class="field" for="inputTinggi">
+                <span class="field-label">Tinggi badan</span>
+                <div class="bmi-input-wrap">
+                  <input type="number" id="inputTinggi" inputmode="decimal" min="100" max="250" step="any" placeholder="Contoh: 165" aria-describedby="bmiError" />
+                  <span class="bmi-input-unit">cm</span>
+                </div>
+              </label>
+
+              <label class="field" for="inputBerat">
+                <span class="field-label">Berat badan</span>
+                <div class="bmi-input-wrap">
+                  <input type="number" id="inputBerat" inputmode="decimal" min="25" max="250" step="any" placeholder="Contoh: 58" aria-describedby="bmiError" />
+                  <span class="bmi-input-unit">kg</span>
+                </div>
+              </label>
+
+              <p class="field-error" id="bmiError" role="alert" hidden>Masukkan tinggi 100–250 cm dan berat 25–250 kg.</p>
+
+              <button type="submit" class="btn btn-primary bmi-submit">Hitung BMI Saya <span aria-hidden="true">→</span></button>
+
+              <p class="bmi-privacy">
+                <span aria-hidden="true">●</span>
+                Perhitungan dilakukan langsung di halaman ini.
+              </p>
+            </form>
+
+            <div class="bmi-result" id="bmiResult" aria-live="polite">
+              <div class="bmi-empty">
+                <div class="bmi-empty-icon" aria-hidden="true">⚖</div>
+                <p class="bmi-result-eyebrow">HASIL PERHITUNGAN</p>
+                <h3>Hasilmu akan muncul di sini</h3>
+                <p>Isi tinggi dan berat badanmu, lalu tekan tombol Hitung BMI Saya untuk melihat hasilnya.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="bmi-note">
+            <strong>Catatan:</strong> BMI merupakan gambaran awal, bukan diagnosis. Interpretasinya dipengaruhi usia dan kondisi tubuh. Kategori BMI dewasa tidak digunakan dengan cara yang sama untuk anak-anak dan remaja.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="section faq-section" id="faq">
+        <div class="container container-narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>Pertanyaan yang <em class="accent-script">sering muncul</em></h2>
+            <p class="section-sub">Kalimat yang paling sering kita dengar dari teman-teman yang baru mulai olahraga — dijawab singkat dan jujur.</p>
+          </div>
+
+          <div class="faq-list reveal">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Apakah pemanasan wajib dilakukan sebelum olahraga?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Sangat disarankan. Pemanasan 5–10 menit menaikkan suhu otot, memperlancar aliran darah, dan menyiapkan sendi.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Apa bedanya pemanasan dinamis dan peregangan statis?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Pemanasan dinamis melibatkan gerakan, seperti lari ringan dan lingkaran lengan. Peregangan statis dilakukan sambil mempertahankan posisi peregangan.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Saya pemula, berapa lama sebaiknya berolahraga?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Mulailah dengan durasi yang nyaman dan intensitas ringan hingga sedang. Tingkatkan latihan secara bertahap agar tubuh punya waktu beradaptasi.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Otot pegal setelah latihan (DOMS), apakah itu cedera?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Pegal yang muncul setelah latihan dapat berupa DOMS. Namun, nyeri tajam, bengkak berat, atau nyeri yang memburuk perlu diperiksa.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Kapan saya harus berhenti dan menemui tenaga medis?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>Berhenti jika mengalami nyeri tajam, bengkak berat, pusing, sesak, atau nyeri dada. Gejala berat atau menetap perlu mendapat penilaian tenaga medis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TENTANG KAMI ================= -->
+      <section class="section about-section" id="tentang-kami">
+        <div class="container">
+          <div class="about-intro">
+            <div class="about-copy">
+              <p class="eyebrow about-eyebrow">TENTANG KAMI</p>
+
+              <h2>Kelompok di balik <em>SportSafe.id</em></h2>
+
+              <div class="about-description">
+                <p>
+                  Kami lima mahasiswa <strong>Sport Science</strong>
+                  yang sedang menempuh mata kuliah
+                  <strong>Data Raya dan Pemrograman</strong>. Lewat proyek UTS ini, kami ingin menyampaikan pengetahuan ilmu olahraga dengan cara yang ringan, modern, dan mudah dipahami.
+                </p>
+
+                <p>Materi website disusun dari sumber ilmiah dan disampaikan menggunakan bahasa sehari-hari supaya teman-teman pemula tidak merasa sedang membaca buku teks.</p>
+              </div>
+
+              <a class="about-reference-btn" href="#referensi"> Lihat Referensi Kami </a>
+            </div>
+
+            <div class="about-visual">
+              <img src="foto.jpg" alt="Kelompok mahasiswa Sport Science" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="team-section">
+            <h2 class="team-title">Pembagian peran anggota</h2>
+
+            <div class="team-grid">
+              <article class="team-card">
+                <div class="team-image">
+                  <img src="dinda.jpeg" alt="Dinda" class="dinda-foto" loading="lazy" />
+                </div>
+                <h3>Dinda</h3>
+                <p class="team-role">PROJECT MANAGER</p>
+                <p class="team-description">Mengatur jadwal, mengoordinasikan anggota, dan memastikan tugas selesai tepat waktu.</p>
+              </article>
+
+              <article class="team-card">
+                <div class="team-image">
+                  <img src="sabrina.jpeg" class="sabrina-foto" alt="Sabrina" loading="lazy" />
+                </div>
+                <h3>Sabrina</h3>
+                <p class="team-role">DEVELOPER</p>
+                <p class="team-description">Membangun website, menyusun HTML, CSS, dan JavaScript, serta memperbaiki bug.</p>
+              </article>
+
+              <article class="team-card">
+                <div class="team-image">
+                  <img src="delia.jpeg" class="Delia-foto" alt="Delia" loading="lazy" />
+                </div>
+                <h3>Delia</h3>
+                <p class="team-role">CONTENT WRITER</p>
+                <p class="team-description">Menulis dan menyunting artikel agar tetap akurat dan mudah dibaca pemula.</p>
+              </article>
+
+              <article class="team-card">
+                <div class="team-image">
+                  <img src="images/ruben.jpg" alt="Ruben" loading="lazy" />
+                </div>
+                <h3>Ruben</h3>
+                <p class="team-role">RESEARCHER</p>
+                <p class="team-description">Menelusuri jurnal dan referensi ilmiah serta memverifikasi fakta dalam artikel.</p>
+              </article>
+
+              <article class="team-card">
+                <div class="team-image">
+                  <img src="khanafi.jpeg" alt="Khanafi" class="khanafi-photo" loading="lazy" />
+                </div>
+                <h3>Khanafi</h3>
+                <p class="team-role">DESIGNER &amp; PUBLISHER</p>
+                <p class="team-description">Menentukan warna, gambar, dan logo, lalu membantu publikasi website.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PERNYATAAN PENGGUNAAN AI ================= -->
+
+      <!-- ===== PERNYATAAN PENGGUNAAN AI ===== -->
+      <section class="section ai-disclosure" id="ai-disclosure">
+        <div class="ai-disclosure-inner">
+          <div class="ai-disclosure-heading">
+            <span class="section-eyebrow">TRANSPARANSI</span>
+            <h2>Pernyataan Penggunaan AI</h2>
+            <p>Informasi mengenai penggunaan kecerdasan buatan dalam pengembangan SportSafe.id.</p>
+          </div>
+
+          <div class="ai-outer-white">
+            <div class="ai-blue-card">
+              <div class="ai-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3 14.8 9.2 21 12l-6.2 2.8L12 21l-2.8-6.2L3 12l6.2-2.8L12 3Z" />
+                  <path d="m19 2 .9 2.1L22 5l-2.1.9L19 8l-.9-2.1L16 5l2.1-.9L19 2Z" />
+                </svg>
+              </div>
+
+              <div class="ai-blue-content">
+                <h3>Penggunaan Artificial Intelligence (AI)</h3>
+                <p>
+                  Website ini dibuat dengan bantuan kecerdasan buatan (AI) sebagai alat bantu — khususnya untuk menyusun kode dan draf tata letak. Pemilihan topik, penyusunan konten, penulisan artikel, serta penelusuran dan verifikasi
+                  seluruh fakta dan referensi tetap dikerjakan dan diperiksa secara mandiri oleh anggota kelompok. Kami memakai AI secara bertanggung jawab: semua keluaran AI kami tinjau ulang sebelum dipublikasikan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REFERENSI ================= -->
+      <section class="references-section" id="referensi">
+        <div class="references-container">
+          <div class="references-heading">
+            <p class="references-eyebrow">REFERENSI &amp; SUMBER ILMIAH</p>
+
+            <h2>
+              Dari sumber yang
+              <span>bisa dipertanggungjawabkan</span>
+            </h2>
+
+            <p class="references-description">Referensi artikel, jurnal ilmiah, dan pedoman kesehatan sebagai landasan informasi SportSafe.</p>
+          </div>
+
+          <div class="reference-list">
+            <div class="reference-group">
+              <h3>Artikel 1 — Pentingnya Pemanasan Sebelum Olahraga</h3>
+              <ol class="reference-items">
+                <li><span class="reference-number">01</span><a href="https://www.alodokter.com/" target="_blank" rel="noopener noreferrer">Alodokter — informasi pemanasan sebelum olahraga.</a></li>
+                <li><span class="reference-number">02</span><a href="https://health.detik.com/" target="_blank" rel="noopener noreferrer">detikHealth — artikel manfaat pemanasan.</a></li>
+                <li><span class="reference-number">03</span><a href="https://www.gramedia.com/" target="_blank" rel="noopener noreferrer">Gramedia — artikel pemanasan sebelum berolahraga.</a></li>
+                <li><span class="reference-number">04</span><span>American Heart Association — sumber pendukung.</span></li>
+              </ol>
+            </div>
+
+            <div class="reference-group">
+              <h3>Artikel 2 — Cedera Olahraga yang Sering Dialami Pemula</h3>
+              <ol class="reference-items">
+                <li><span class="reference-number">01</span><a href="https://www.wakehealth.edu/" target="_blank" rel="noopener noreferrer">Wake Forest Baptist Health — informasi cedera olahraga.</a></li>
+                <li><span class="reference-number">02</span><a href="https://www.yatharthhospitals.com/" target="_blank" rel="noopener noreferrer">Yatharth Hospitals — pencegahan dan penanganan cedera.</a></li>
+                <li><span class="reference-number">03</span><a href="https://www.fortishealthcare.com/" target="_blank" rel="noopener noreferrer">Fortis Healthcare — informasi cedera olahraga.</a></li>
+                <li><span class="reference-number">04</span><a href="https://healthtalk.unchealthcare.org/" target="_blank" rel="noopener noreferrer">UNC Health Talk — pencegahan dan penanganan cedera.</a></li>
+              </ol>
+            </div>
+
+            <div class="reference-group">
+              <h3>Artikel 3 — Recovery dan Istirahat Setelah Latihan</h3>
+              <ol class="reference-items">
+                <li><span class="reference-number">01</span><a href="https://kemkes.go.id/" target="_blank" rel="noopener noreferrer">Kementerian Kesehatan RI — informasi kesehatan dan pemulihan.</a></li>
+                <li><span class="reference-number">02</span><a href="https://keslan.kemkes.go.id/" target="_blank" rel="noopener noreferrer">Direktorat Jenderal Kesehatan Lanjutan — rehabilitasi cedera.</a></li>
+                <li><span class="reference-number">03</span><span>Multilateral: Jurnal Pendidikan Jasmani dan Olahraga — sumber pendukung recovery.</span></li>
+                <li><span class="reference-number">04</span><span>Jurnal Olahraga dan Kesehatan Indonesia — sumber pendukung pemulihan.</span></li>
+              </ol>
+            </div>
+
+            <div class="reference-group">
+              <h3>Artikel 4 — Pemanasan dan Pendinginan</h3>
+              <ol class="reference-items">
+                <li><span class="reference-number">01</span><span>Nurhidayat dkk. (2024). Optimalisasi pemahaman pemanasan dan pendinginan untuk mencegah cedera pada klub olahraga.</span></li>
+                <li><span class="reference-number">02</span><span>Rahmat dkk. (2025). Efektivitas pemanasan dan pendinginan terhadap pencegahan cedera pada atlet taekwondo.</span></li>
+                <li><span class="reference-number">03</span><span>Rezki dkk. (2022). Pentingnya aktivitas pemanasan dan pendinginan dalam berolahraga.</span></li>
+                <li><span class="reference-number">04</span><span>Rujukan pendukung: Shellock &amp; Prentice (1985); Pope dkk. (2000); Bishop (2003); McGowan dkk. (2015); Haff &amp; Triplett (2015).</span></li>
+              </ol>
+            </div>
+
+            <div class="reference-group">
+              <h3>Artikel 5 — Cedera Olahraga pada Atlet</h3>
+              <ol class="reference-items">
+                <li>
+                  <span class="reference-number">01</span>
+                  <span>
+                    Setyaningrum, D. A. W. (2019). Cedera olahraga serta penyakit terkait olahraga. <em>Jurnal Biomedika dan Kesehatan, 2</em>(1), 39–44.
+                    <a href="https://doi.org/10.18051/JBiomedKes.2019.v2.39-44" target="_blank" rel="noopener noreferrer">Buka DOI</a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+
+            <div class="reference-group">
+              <h3>Jurnal &amp; Pedoman Ilmiah Pendukung</h3>
+              <ol class="reference-items">
+                <li>
+                  <span class="reference-number">01</span>
+                  <span>
+                    World Health Organization. (2020).
+                    <em>WHO Guidelines on Physical Activity and Sedentary Behaviour.</em>
+                    Geneva: World Health Organization.
+                  </span>
+                </li>
+                <li>
+                  <span class="reference-number">02</span>
+                  <span>
+                    Fradkin, A. J., Zazryn, T. R., &amp; Smoliga, J. M. (2010). Effects of warming-up on physical performance: A systematic review with meta-analysis.
+                    <em>Journal of Strength and Conditioning Research, 24</em>(1), 140–148.
+                  </span>
+                </li>
+                <li>
+                  <span class="reference-number">03</span>
+                  <span>
+                    Woods, K., Bishop, P., &amp; Jones, E. (2007). Warm-up and stretching in the prevention of muscular injury.
+                    <em>Sports Medicine, 37</em>(12), 1089–1099.
+                  </span>
+                </li>
+                <li>
+                  <span class="reference-number">04</span>
+                  <span>
+                    Lauersen, J. B., Bertelsen, D. M., &amp; Andersen, L. B. (2014). The effectiveness of exercise interventions to prevent sports injuries: A systematic review and meta-analysis of randomised controlled trials.
+                    <em>British Journal of Sports Medicine, 48</em>(11), 871–877.
+                  </span>
+                </li>
+                <li>
+                  <span class="reference-number">05</span>
+                  <span>
+                    Behm, D. G., Blazevich, A. J., Kay, A. D., &amp; McHugh, M. (2016). Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in healthy active individuals: A systematic review.
+                    <em>Applied Physiology, Nutrition, and Metabolism, 41</em>(1), 1–11.
+                  </span>
+                </li>
+                <li>
+                  <span class="reference-number">06</span>
+                  <span>
+                    American College of Sports Medicine. (2018).
+                    <em>ACSM's Guidelines for Exercise Testing and Prescription</em>
+                    (10th ed.). Wolters Kluwer.
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ================= AKHIR KONTEN UTAMA ================= -->
+
+    <!-- ================= FOOTER DI LUAR MAIN ================= -->
+    <footer class="footer" id="footer">
+      <div class="container footer-grid">
+        <!-- Kolom 1: Logo dan tagline -->
+        <div class="footer-brand">
+          <a href="#beranda" class="brand brand-light">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0878e8" />
+                  <stop offset="100%" stop-color="#06b98b" />
+                </linearGradient>
+              </defs>
+
+              <rect width="64" height="64" rx="16" fill="url(#footerLogoGrad)" />
+
+              <polyline points="12,34 22,34 27,20 34,46 39,34 52,34" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <span class="brand-name">SportSafe<em>.id</em></span>
+          </a>
+
+          <p class="footer-tagline">Olahraga aman untuk pemula — pemanasan, cegah cedera, pulih dengan benar.</p>
+        </div>
+
+        <!-- Kolom 2: Navigasi -->
+        <nav class="footer-nav" aria-label="Menu footer">
+          <h3 class="footer-title">Jelajahi</h3>
+
+          <ul class="footer-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#artikel">Artikel Populer</a></li>
+            <li><a href="#quiz">Quiz Interaktif</a></li>
+            <li><a href="#bmi">Kalkulator BMI</a></li>
+            <li><a href="#tentang-kami">Tentang Kami</a></li>
+            <li><a href="#referensi">Referensi</a></li>
+          </ul>
+        </nav>
+
+        <!-- Kolom 3: Disclaimer -->
+        <div class="footer-info">
+          <h3 class="footer-title">Disclaimer</h3>
+
+          <p class="footer-disclaimer">Website ini dibuat untuk tugas kuliah dan bersifat edukasi umum, bukan pengganti saran dokter atau tenaga medis profesional.</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="container footer-bottom">
+        <p>© <span id="year">2026</span> SportSafe.id — Proyek UTS Data Raya dan Pemrograman · Kelompok Sport Science</p>
+      </div>
+    </footer>
+
+    <!-- ================= BACK TO TOP ================= -->
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke bagian atas halaman">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5" />
+        <path d="m5 12 7-7 7 7" />
+      </svg>
+    </button>
+  </body>
+</html>
